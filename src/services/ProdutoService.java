@@ -1,5 +1,4 @@
 package services;
-import java.util.Map;
 
 import model.Produto;
 import repository.ProdutoRepository;
@@ -21,8 +20,8 @@ public class ProdutoService {
 
     public String listarProdutos() {  
         String result = "";
-        for (Map.Entry<Integer,Produto> pair : produtoRepository.listarProdutos().entrySet()) {
-            result += pair.getValue() + System.lineSeparator();
+        for (Produto produto : produtoRepository.listarProdutos().values()) {
+            result += produto + System.lineSeparator();
         }
         return result.trim();
     }

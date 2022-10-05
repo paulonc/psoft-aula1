@@ -1,7 +1,6 @@
 package services;
 
 import java.time.LocalDate;
-import java.util.Map;
 
 import model.Lote;
 import model.Produto;
@@ -23,9 +22,8 @@ public class LoteService {
 
     public String listarLotes() {
         String result = "";
-        for (Map.Entry<Integer, Lote> pair : loteRepository.listarLotes().entrySet()) {
-            System.out.println(pair.getValue());
-            result += pair.getValue() + System.lineSeparator();
+        for (Lote lote : loteRepository.listarLotes().values()) {;
+            result += lote + System.lineSeparator();
         }
         return result.trim();
     }
