@@ -1,4 +1,4 @@
-package reposiroty;
+package repository;
 
 import java.util.Map;
 import java.util.HashMap;

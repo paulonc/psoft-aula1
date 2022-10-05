@@ -5,7 +5,7 @@ import java.util.Map;
 
 import model.Lote;
 import model.Produto;
-import reposiroty.LoteRepository;
+import repository.LoteRepository;
 
 public class LoteService {
 
@@ -27,7 +27,7 @@ public class LoteService {
             System.out.println(pair.getValue());
             result += pair.getValue() + System.lineSeparator();
         }
-        return result;
+        return result.trim();
     }
 
    

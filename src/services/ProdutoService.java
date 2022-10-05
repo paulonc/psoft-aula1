@@ -2,7 +2,7 @@ package services;
 import java.util.Map;
 
 import model.Produto;
-import reposiroty.ProdutoRepository;
+import repository.ProdutoRepository;
 
 public class ProdutoService {
 
@@ -24,7 +24,7 @@ public class ProdutoService {
         for (Map.Entry<Integer,Produto> pair : produtoRepository.listarProdutos().entrySet()) {
             result += pair.getValue() + System.lineSeparator();
         }
-        return result;
+        return result.trim();
     }
 
 
